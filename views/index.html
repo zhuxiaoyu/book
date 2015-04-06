@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Book  Price Comparison Of Online Stores</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+       <!-- <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>-->
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/social-icons.css">
+        <link rel="stylesheet" href="assets/css/ebook-style.css">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <div class="container">
+            <div class="header row">
+                <div class="logo span4"></div>
+                <div class="tel-skype span8">
+                    <p><i class="icon-phone-sign"></i> Phone: 1443456789 <span class="pipe">|</span> 
+					<i class="icon-user"></i> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=857098490&site=qq&menu=yes">
+					<img src="http://www.sunkf.net/codes/one/images/q_1.gif" border="0" alt="点击咨询" title="点击咨询"></a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Showcase -->
+        <div class="product-showcase">
+            <div class="product-showcase-pattern">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12 product-background">
+                            <div class="row">
+                                <div class="span5 product-image">
+                                    
+                                </div>
+                                <div class="span7 product-title">
+                                    
+                                    <div class="product-description">
+                                        <p>Our new website, <strong>"Book Price Comparison Of Online Books"</strong> is now ready. Enter the name of the book  in the form below and start searching right now.</p>
+                                        <p>Our website has collected book prices from different online bookstores and store them distributelly</p>
+                                        <p><h2>Go and find the cheapest book you want!<h2></p>
+                                      <!--  <form action="/dosearch" method="post" class="subscribe">
+                                            <input type="text" name="name" id="name" class="email" placeholder="Enter the name of the book">
+                                            <button type="submit">Search it now!</button>
+                                        </form>-->
+                                     <form id='fm' action="/dosearch" method="post" >
+                                      <input type="text" name="name" id="searchbook"  placeholder="Enter the name of the book" >
+					                  <button id="submitbtn" type="submit" >Search</button>
+					                 </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="span12 copyright">
+                        <p>Copyright &copy; 2014 - Zhu Xiaoyu </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="container">
+
+            <div class="row">
+                <div class="span12">
+                    <!-- features -->
+                  
+                </div>
+            </div> <!-- end row -->
+
+            <div class="row">
+                <div class="span12">
+                    <!-- gallery -->
+                
+                </div>
+            </div> <!-- end row -->
+
+            <div class="row">
+                <div class="span12">
+                  
+                </div>
+            </div> <!-- end row -->
+
+            <div class="row">
+                <!-- as seen on -->
+               
+            </div> <!-- end row -->
+
+        </div> <!-- end container -->
+
+       
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/jquery.tweet.js"></script>
+        <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+        <script src="assets/js/ebook-scripts.js"></script>
+
+        <script type="text/javascript" charset="utf-8">
+            var btn = $("#searchbtn"),
+                text = $("#booktext")
+                btn.click('click', function(e){
+                   e.preventDefault() 
+                   $.ajax({
+                        url: '/dosearch',
+                        type: 'post',
+                        data: {
+                            "name": text.val(),
+                        },
+                        success: function(data){
+                            if (data == 404) {
+                                alert(data.msg)
+                            }
+                        }
+                   })
+                })
+        </script>
+    </body>
+
+</html>
+

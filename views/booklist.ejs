@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+       <title><%= title %></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+       <!-- <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>-->
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/social-icons.css">
+        <link rel="stylesheet" href="assets/css/ebook-style.css">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+
+    <body>
+
+        <!-- Header -->
+        <div class="container">
+            <div class="header row">
+                <div class="logo span4">
+                   
+                </div>
+                <div class="tel-skype span8">
+                    <p><i class="icon-phone-sign"></i> Phone: 1443456789 <span class="pipe">|</span> 
+					<i class="icon-user"></i> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=857098490&site=qq&menu=yes">
+					<img src="http://www.sunkf.net/codes/one/images/q_1.gif" border="0" alt="点击咨询" title="点击咨询"></a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Showcase -->
+        <div class="product-showcase">
+            <div class="product-showcase-pattern">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12 product-background">
+                            <div class="row">
+                                <div class="span5 product-image">
+                                    <p>Bookname: <%= searchresult.book_name %></p><br/>
+                                    <p>Author:<%= searchresult.author %></p><br/>
+
+                                    <p>Publisher:<%= searchresult.publisher %></p><br/>
+                                    <p>Jingdong:￥<%= searchresult.jingdongprice %></p><br/>
+                                   
+                                    <p>Amazon:  ￥<%= tt.listprice %></p><br/>
+                                    <p style="float:'right'"><a href="/">return </a></p>
+                                </div>
+                                <div class="span7 product-title">
+                                    
+                                    <div class="product-description">
+                                    <% if(searchresult.imageURL ) { %>
+                                        <img src="<%= searchresult.imageURL %>">
+                                    <% } else { %>
+                                        <img src="2000.gif" alt="未找到图片" title="书籍图片">
+                                    <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="span12 copyright">
+                        <p>Copyright &copy; 2014 - Zhu Xiaoyu </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="container">
+
+            <div class="row">
+                <div class="span12">
+                    <!-- features -->
+                  
+                </div>
+            </div> <!-- end row -->
+
+            <div class="row">
+                <div class="span12">
+                    <!-- gallery -->
+                
+                </div>
+            </div> <!-- end row -->
+
+            <div class="row">
+                <div class="span12">
+                  
+                </div>
+            </div> <!-- end row -->
+
+            <div class="row">
+                <!-- as seen on -->
+               
+            </div> <!-- end row -->
+
+        </div> <!-- end container -->
+
+       
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/jquery.tweet.js"></script>
+        <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+        <script src="assets/js/ebook-scripts.js"></script>
+	<script src="assets/js/index.js"></script>
+
+    </body>
+
+</html>
+
